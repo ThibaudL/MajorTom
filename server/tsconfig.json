@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "/src",
+    "/types",
+    "/node_modules/@types"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  }
+
+}

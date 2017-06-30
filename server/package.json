@@ -1,0 +1,36 @@
+{
+  "name": "major-tom-server",
+  "version": "1.0.0",
+  "description": "Server Hackaton Majordome 3.0",
+  "keywords": [
+    "angular",
+    "home",
+    "domotique",
+    "server",
+    "hackaton"
+  ],
+  "author": "MajorTomDevs",
+  "homepage": "https://github.com/ThibaudL/MajorTom",
+  "scripts": {
+    "build": "webpack -p -d",
+    "build:dev": "webpack -w -d",
+    "start": "node dist/bundle.js"
+  },
+  "index": "dist/bundle.js",
+  "main": "src/index.ts",
+  "dependencies": {
+    "nosql" : "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "7.0.13",
+    "awesome-typescript-loader": "3.0.0-beta.17",
+    "css-loader": "0.26.1",
+    "style-loader": "0.16.1",
+    "json-loader": "0.5.4",
+    "raw-loader": "0.5.1",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.2.2",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.4"
+  }
+}
