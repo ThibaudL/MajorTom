@@ -1,3 +1,1 @@
-
-
-console.log("Hello WOrlddd");
+require("./service/piecesService");

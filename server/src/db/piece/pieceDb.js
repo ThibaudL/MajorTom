@@ -1,13 +1,34 @@
-const db = require('../db').getDb();
+const loki = require('lokijs');
 
 const COLLECTION_NAME = 'piece';
-// Add a collection to the database
-const pieceDb = db.addCollection(COLLECTION_NAME);
+const DATABASE_PATH = "database/MajorTom.db";
+
+const db = new loki(DATABASE_PATH, {autoload: true});
+
+let pieceDb = null;
+
 module.exports = {
-    getPieceDb: function () {
-        return pieceDb;
+    initDatabase: () => {
+        return new Promise((fullfill, reject) => {
+            db.loadDatabase({}, () => {
+                pieceDb = db.getCollection(COLLECTION_NAME);
+                if (!pieceDb) {
+                    console.log("Creation collection : ", COLLECTION_NAME);
+                    pieceDb = db.addCollection(COLLECTION_NAME);
+                    db.saveDatabase();
+                    fullfill(pieceDb);
+                }else {
+                    fullfill(pieceDb);
+                }
+            },(error) => {
+                reject(error);
+            });
+        });
     },
-    getCollectionName : function(){
+    getCollectionName: function () {
         return COLLECTION_NAME;
+    },
+    getDb: function () {
+        return db;
     }
 };
