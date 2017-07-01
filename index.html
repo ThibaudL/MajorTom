@@ -1,19 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="majortomApp">
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.colorpickersliders.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
+        <nav class="navbar fixed-top navbar-light bg-faded">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/img/man.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            </a>
+            <div class="nav-title">
+                <span>MajorTom</span>
+            </div>
+            <button class="btn btn-primary btn-circle" type="button" data-toggle="modal" data-target="#myModal">
+                <i class="fa fa-cog"></i>
+            </button>
         </nav>
     </header>
-    <footer>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Mode</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-sunny" type="button"></button></div>
+            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-night" type="button"></button></div>
+            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-confetti" type="button"></button></div>
+            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-dream" type="button"></button></div>
+            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-alarm-clock" type="button"></button></div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-energy" type="button"></button></div>
+            <div class="col-sm-2">
+                <button class="btn btn-primary btn-circle-2" type="button">
+                    <i class="fa fa-plus-circle fa-2x"></i>
+                </button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-sm-12">
+                <h2>Dans la maison</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-man" type="button"></button></div>
+            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-woman" type="button"></button></div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="exampleModalLabel">Paramétrage des pièces</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <button class="btn btn-primary btn-add-piece">
+                            <span>Ajouter une pièce</span>
+                            <i class="fa fa-plus-circle"></i>
+                        </button>
+                        <div class="container form-pieces"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-primary">Sauvegarder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="weather"></div>
+            </div>
+            <!--<div class="col-sm-6">-->
+                <!--<button class="btn btn-primary" type="button">-->
+                    <!--<i class="fa fa-exclamation-circle fa-2x"></i>-->
+                <!--</button>-->
+                <!--<div class="notifications-container hidden">-->
+                    <!--<div class="alert alert-info" role="alert">-->
+                        <!--<strong>Heads up!</strong> This alert needs your attention, but it's not super important.-->
+                    <!--</div>-->
+                    <!--<div class="alert alert-warning" role="alert">-->
+                        <!--<strong>Warning!</strong> Better check yourself, you're not looking too good.-->
+                    <!--</div>-->
+                    <!--<div class="alert alert-danger" role="alert">-->
+                        <!--<strong>Oh snap!</strong> Change a few things up and try submitting again.-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="row mt-4">
+            <div class="col-sm-12">
+                <button class="btn btn-primary btn-help mb-2">
+                    Besoin d'aide ?
+                </button>
+            </div>
+        </div>
     </footer>
+    <!-- jQuery library -->
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <!-- Tether -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <!-- Bootstrap 4 Alpha JS -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="/assets/js/jquery.simpleWeather.min.js"></script>
+    <script src="/assets/js/bootstrap.colorpickersliders.js"></script>
+    <script src="/assets/js/scripts.js"></script>
 </body>
 </html>

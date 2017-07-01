@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="360px" height="640px" viewBox="0 0 360 640" enable-background="new 0 0 360 640" xml:space="preserve">
+<g>
+	<path fill="#324A5E" d="M180,208.649L180,208.649c-61.521,0-111.351,49.83-111.351,111.351l0,0
+		c0,61.521,49.83,111.351,111.351,111.351l0,0c61.521,0,111.351-49.829,111.351-111.351l0,0
+		C291.351,258.479,241.521,208.649,180,208.649z"/>
+	<path fill="#FFFFFF" d="M180,230.606L180,230.606c-49.402,0-89.394,40.063-89.394,89.394l0,0c0,49.402,40.063,89.395,89.394,89.395
+		l0,0c49.402,0,89.395-40.064,89.395-89.395l0,0C269.395,270.598,229.402,230.606,180,230.606z"/>
+	<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="180.036" y1="320" x2="241.734" y2="336.5"/>
+	<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="180.036" y1="320" x2="163.5" y2="387.865"/>
+	<g>
+		<rect x="175.865" y="242.083" fill="#E6E9EE" width="8.341" height="20.103"/>
+		<rect x="175.865" y="377.814" fill="#E6E9EE" width="8.341" height="20.103"/>
+		<rect x="237.814" y="315.865" fill="#E6E9EE" width="20.103" height="8.341"/>
+		<rect x="102.083" y="315.865" fill="#E6E9EE" width="20.103" height="8.341"/>
+		
+			<rect x="141.862" y="251.636" transform="matrix(0.866 -0.5001 0.5001 0.866 -109.8294 106.8156)" fill="#E6E9EE" width="4.99" height="13.332"/>
+		
+			<rect x="213.079" y="375.063" transform="matrix(0.8661 -0.4999 0.4999 0.8661 -161.9692 158.9067)" fill="#E6E9EE" width="4.991" height="13.331"/>
+		
+			<rect x="115.816" y="277.737" transform="matrix(0.5 -0.866 0.866 0.5 -187.1426 244.6494)" fill="#E6E9EE" width="4.99" height="13.331"/>
+		
+			<rect x="239.178" y="348.991" transform="matrix(0.5 -0.866 0.866 0.5 -187.1703 387.1365)" fill="#E6E9EE" width="4.989" height="13.33"/>
+		
+			<rect x="115.817" y="348.992" transform="matrix(-0.5001 -0.866 0.866 -0.5001 -130.5032 635.9802)" fill="#E6E9EE" width="4.989" height="13.331"/>
+		
+			<rect x="239.239" y="277.735" transform="matrix(-0.5 -0.866 0.866 -0.5 116.3165 635.9527)" fill="#E6E9EE" width="4.99" height="13.331"/>
+		
+			<rect x="141.886" y="375.036" transform="matrix(-0.8661 -0.4998 0.4998 -0.8661 78.6396 784.4672)" fill="#E6E9EE" width="4.99" height="13.331"/>
+		
+			<rect x="213.156" y="251.667" transform="matrix(-0.8661 -0.4999 0.4999 -0.8661 273.2925 589.8724)" fill="#E6E9EE" width="4.991" height="13.331"/>
+	</g>
+	<circle fill="#84DBFF" cx="180" cy="320" r="11.406"/>
+</g>
+</svg>

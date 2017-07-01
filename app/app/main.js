@@ -1,0 +1,1 @@
+var majortomApp = angular.module('majortomApp', []);

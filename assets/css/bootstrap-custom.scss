@@ -1,0 +1,96 @@
+.btn {
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn-circle-2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: 60% !important;
+  background-position: center !important;
+  &:hover {
+    background-color: #FFF;
+    background-size: 70% !important;
+  }
+}
+
+.btn-primary {
+  background-color: $primary !important;
+  border-color: $primary !important;
+  transition: 0.3s linear;
+  &:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+}
+
+.bg-primary {
+  background-color: $primary !important;
+  border-color: $primary !important;
+  color: #FFF;
+}
+
+.btn-sunny {
+  background: url('../img/sunny.svg') no-repeat;
+  &:hover {
+    background-image: url('../img/sunny-over.svg');
+  }
+}
+
+.btn-night {
+  background: url('../img/night.svg') no-repeat;
+  &:hover {
+    background-image: url('../img/night-over.svg');
+  }
+}
+
+.btn-confetti {
+  background: url('../img/confetti.svg') no-repeat;
+  &:hover {
+    background-image: url('../img/confetti-over.svg');
+  }
+}
+
+.btn-dream {
+  background: url('../img/dream.svg') no-repeat;
+  &:hover {
+    background-image: url('../img/dream-over.svg');
+  }
+}
+
+.btn-alarm-clock {
+  background: url('../img/alarm-clock.svg') no-repeat;
+  &:hover {
+    background-image: url('../img/alarm-clock-over.svg');
+  }
+}
+
+.btn-energy {
+  background: url('../img/energy.svg') no-repeat;
+  &:hover {
+    background-image: url('../img/energy-over.svg');
+  }
+}
+
+.btn-man {
+  background: url('../img/man.svg') no-repeat;
+  background-size: 80% !important;
+  &:hover {
+    background-image: url('../img/man-over.svg');
+    background-size: 90% !important;
+  }
+}
+
+.btn-woman {
+  background: url('../img/girl.svg') no-repeat;
+  background-size: 80% !important;
+  &:hover {
+    background-image: url('../img/girl-over.svg');
+    background-size: 90% !important;
+  }
+}
+
+.btn-help {
+  width: 100%;
+}
