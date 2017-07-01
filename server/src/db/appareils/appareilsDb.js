@@ -1,6 +1,6 @@
 const loki = require('lokijs');
 
-const COLLECTION_NAME = 'piece';
+const COLLECTION_NAME = 'appareils';
 const DATABASE_PATH = "database/MajorTom.db";
 
 const db = new loki(DATABASE_PATH, {autoload: true});

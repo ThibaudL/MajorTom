@@ -3,8 +3,8 @@ const app = require("./server").getApp();
 const port = require("./server").getPort();
 const router = express.Router();
 
-const pieceDb = require("../db/pieces/piecesDb");
-const db = require("../db/pieces/piecesDb").getDb();
+const pieceDb = require("../db/appareils/appareilsDb");
+const db = require("../db/appareils/appareilsDb").getDb();
 
 //GET
 router.get('/', function (req, res) {
@@ -40,5 +40,5 @@ router.delete('/', function (req, res) {
     });
 });
 
-app.use('/api/pieces', router);
-console.log('http://localhost:' + port + '/api/pieces');
+app.use('/api/appareils', router);
+console.log('http://localhost:' + port + '/api/appareils');
