@@ -2,6 +2,7 @@
 <html lang="en" ng-app="majortomApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title></title>
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/bootstrap-grid.css">
@@ -31,15 +32,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-sunny" type="button"></button></div>
-            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-night" type="button"></button></div>
-            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-confetti" type="button"></button></div>
-            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-dream" type="button"></button></div>
-            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-alarm-clock" type="button"></button></div>
+            <div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2 btn-sunny" type="button"></button></div>
+            <div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2 btn-night" type="button"></button></div>
+            <div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2 btn-confetti" type="button"></button></div>
+            <div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2 btn-dream" type="button"></button></div>
+            <div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2 btn-alarm-clock" type="button"></button></div>
         </div>
         <div class="row mt-2">
-            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-energy" type="button"></button></div>
-            <div class="col-sm-2">
+            <div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2 btn-energy" type="button"></button></div>
+            <div class="col-4 col-sm-2">
                 <button class="btn btn-primary btn-circle-2 btn-add-scenari" type="button" data-toggle="modal" data-target="#myModalScenari">
                     <i class="fa fa-plus-circle fa-2x"></i>
                 </button>
@@ -51,8 +52,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-man" type="button"></button></div>
-            <div class="col-sm-2"><button class="btn btn-primary btn-circle-2 btn-woman" type="button"></button></div>
+            <div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2 btn-man" type="button"></button></div>
+            <div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2 btn-woman" type="button"></button></div>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -89,8 +90,8 @@
                             <div class="form-piece row mt-2">
                                 <form class="col-sm-12">
                                     <div class="form-group">
-                                        <label for="selectTypePiece">Sélectionnez la pièce à ajouter</label>
                                         <select  id="selectTypePiece" class="form-control type-piece">
+                                            <option>Sélectionnez une pièce</option>
                                         </select>
                                         <div class="row mt-2">
                                             <div class="col-sm-6">
@@ -110,9 +111,8 @@
                                                     >
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-6 prise-container">
                                                 <h6>Nombre de prise</h6>
-                                                <button class="btn btn-primary icon"><i class="fa fa-plug"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -152,13 +152,13 @@
                 <!--</div>-->
             <!--</div>-->
         </div>
-        <div class="row mt-4">
-            <div class="col-sm-12">
-                <button class="btn btn-primary btn-help mb-2">
-                    Besoin d'aide ?
-                </button>
-            </div>
-        </div>
+        <!--<div class="row mt-4">-->
+            <!--<div class="col-sm-12">-->
+                <!--<button class="btn btn-primary btn-help mb-2">-->
+                    <!--Besoin d'aide ?-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</div>-->
     </footer>
     <!-- jQuery library -->
     <script
