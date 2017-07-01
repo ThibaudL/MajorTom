@@ -71,6 +71,11 @@ $(function () {
                             $(this).attr('data-status', 'enable');
                         }
                     });
+
+                    $('.btn-save-scenari').on('click', function (e) {
+                        $('.container-btn-addscenari').before('<div class="col-4 col-sm-2"><button class="btn btn-primary btn-circle-2" type="button">Nouveau</button></div>');
+                        $('#myModalScenari').modal('hide');
+                    });
                 });
 
 
