@@ -40,7 +40,11 @@ $(function () {
                 return rObj;
             });
             $.each(data, function(key, val) {
-                console.log(val);
+                var tableauFormaté = val.map(function(obj){
+                    var rObj = {};
+                    rObj[obj.clé] = obj.valeur;
+                    return rObj;
+                });
             });
         });
 
