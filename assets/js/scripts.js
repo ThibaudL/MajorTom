@@ -24,6 +24,10 @@ $(function () {
         $('#myModal .alert').remove();
     });
 
+    $("#icon-buble").on('click', function (e) {
+        e.preventDefault();
+    })
+
 
         $('#myModalScenari').on('show.bs.modal', function (e) {
 
