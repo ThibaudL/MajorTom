@@ -61,15 +61,14 @@ $(function () {
                     });
 
                     $('.prise-container .icon').on('click', function (e) {
-                        console.log($(this));
                         if($(this).hasClass('enable')) {
                             $(this).removeClass('enable');
                             $(this).addClass('disable');
-                            $(this).data('status', 'disable');
+                            $(this).attr('data-status', 'disable');
                         } else {
                             $(this).removeClass('disable');
                             $(this).addClass('enable');
-                            $(this).data('status', 'enable');
+                            $(this).attr('data-status', 'enable');
                         }
                     });
                 });

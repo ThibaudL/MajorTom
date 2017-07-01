@@ -8,10 +8,10 @@ body {
 }
 
 h2 {
-  background: #eb6d4a;
+  background: $primary;
   padding: .5em;
   color: #FFF;
-  border-left: 10px solid #ce5d3d;
+  border-left: 10px solid darken($primary, 10%);
 }
 
 .navbar {

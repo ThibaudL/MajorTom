@@ -20,16 +20,16 @@
     background-size: 70% !important; }
 
 .btn-primary {
-  background-color: #eb6d4a !important;
-  border-color: #eb6d4a !important;
+  background-color: #fbb040 !important;
+  border-color: #fbb040 !important;
   transition: 0.3s linear; }
   .btn-primary:hover {
-    background-color: #e6481c;
-    border-color: #e6481c; }
+    background-color: #fa9b0e;
+    border-color: #fa9b0e; }
 
 .bg-primary {
-  background-color: #eb6d4a !important;
-  border-color: #eb6d4a !important;
+  background-color: #fbb040 !important;
+  border-color: #fbb040 !important;
   color: #FFF; }
 
 .btn-sunny {
@@ -81,17 +81,21 @@
 
 .modal .btn-add-piece {
   width: 100%; }
-.modal .prise-container .icon .disable {
-  background-color: #4b5257; }
+.modal .prise-container .icon.disable {
+  background-color: #4b5257 !important;
+  border-color: #4b5257 !important; }
+.modal .prise-container .icon.enable {
+  background-color: #fbb040 !important;
+  border-color: #fbb040 !important; }
 
 body {
   padding-top: 54px; }
 
 h2 {
-  background: #eb6d4a;
+  background: #fbb040;
   padding: .5em;
   color: #FFF;
-  border-left: 10px solid #ce5d3d; }
+  border-left: 10px solid #fa9b0e; }
 
 .navbar {
   display: flex;

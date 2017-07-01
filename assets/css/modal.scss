@@ -5,8 +5,13 @@
 
   .prise-container {
     .icon {
-      .disable {
-        background-color: #4b5257;
+      &.disable {
+        background-color: #4b5257 !important;
+        border-color: #4b5257 !important;
+      }
+      &.enable {
+        background-color: $primary !important;
+        border-color: $primary !important;
       }
     }
   }
