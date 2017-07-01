@@ -1,16 +1,63 @@
 $(function () {
-    // navigator.geolocation.watchPosition();
+
+    $('.btn-localiser').on('click', function (e) {
+        navigator.geolocation.getCurrentPosition(successGeoloc);
+    });
+
+    function successGeoloc(pos) {
+        var crd = pos.coords;
+
+        $.ajax({
+            type: "POST",
+            url: "http://192.168.110.141:8080/api/geolocalisation/thisishome/"+crd.latitude+"/"+crd.longitude,
+            success: function (data) {
+                $('#myModal .modal-body').append('<div class="alert alert-success mt-2" role="alert">Vos coordonnées ont bien été reçues '+ data +'</div>');
+            },
+            error: function (data) {
+                $('#myModal .modal-body').append('<div class="alert alert-danger mt-2" role="alert">Nous n\'avons pas reçu vos coordonnées, veuillez vérifier votre connexion</div>');
+            },
+            dataType: "json"
+        });
+    };
+
+    $('#myModalScenari').on('hidden.bs.modal	', function (e) {
+        $('#myModal .alert').remove();
+    });
+
+
+        $('#myModalScenari').on('show.bs.modal', function (e) {
+
+        $.getJSON("http://192.168.110.141:8080/api/appareils", function(data) {
+            var pieces = [];
+            var piece = new Object();
+            var $prise = new Object();
+            var $ligth = new Object();
+            var count = 0;
+            var tableauOrig = [{clé:1, valeur:10}, {clé:2, valeur:20}, {clé:3, valeur: 30}];
+            var tableauFormaté = tableauOrig.map(function(obj){
+                var rObj = {};
+                rObj[obj.clé] = obj.valeur;
+                return rObj;
+            });
+            $.each(data, function(key, val) {
+                console.log(val);
+            });
+        });
+
+
+        function onlyUnique(value, index, self) {
+            return self.indexOf(value) === index;
+        }
+
+        function callback(data) {
+            console.log('ok');
+        }
+
+    });
 
     $('.btn-add-piece').on('click', function(){
-        $('.form-pieces').load('/app/components/form-piece.html');
-    });
 
-    $( ".color" ).slider({
-        orientation: "horizontal",
-        range: "min",
-        animate: true
     });
-
 
     $.simpleWeather({
         location: 'Poitiers',
