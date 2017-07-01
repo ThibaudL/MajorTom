@@ -5,26 +5,28 @@ const DATABASE_PATH = "database/MajorTom.db";
 
 const db = new loki(DATABASE_PATH, {autoload: true});
 
-let pieceDb = null;
+let appareilDb = null;
 
 module.exports = {
+    appareilDb : appareilDb,
     initDatabase: () => {
         return new Promise((fullfill, reject) => {
             db.loadDatabase({}, () => {
-                pieceDb = db.getCollection(COLLECTION_NAME);
-                if (!pieceDb) {
+                appareilDb = db.getCollection(COLLECTION_NAME);
+                if (!appareilDb) {
                     console.log("Creation collection : ", COLLECTION_NAME);
-                    pieceDb = db.addCollection(COLLECTION_NAME);
+                    appareilDb = db.addCollection(COLLECTION_NAME);
                     db.saveDatabase();
-                    fullfill(pieceDb);
+                    fullfill(appareilDb);
                 }else {
-                    fullfill(pieceDb);
+                    fullfill(appareilDb);
                 }
             },(error) => {
                 reject(error);
             });
         });
     },
+
     getCollectionName: function () {
         return COLLECTION_NAME;
     },

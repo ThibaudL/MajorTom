@@ -14,9 +14,13 @@ const OFF_VALUE = 0;
 
 zwave.setNodeOn = function(node){
     client.send('/'+node, parseFloat(ON_VALUE));
+    client.send('/'+node, parseFloat(ON_VALUE));
+    client.send('/'+node, parseFloat(ON_VALUE));
     console.log("setNodeOn : ",node, ON_VALUE);
 };
 zwave.setNodeOff = function(node){
+    client.send('/'+node, parseFloat(OFF_VALUE));
+    client.send('/'+node, parseFloat(OFF_VALUE));
     client.send('/'+node, parseFloat(OFF_VALUE));
     console.log("setNodeOff : ",node,OFF_VALUE);
 };
@@ -25,6 +29,8 @@ zwave.setNodeOff = function(node){
  * See warning below
  */
 zwave.setLevel = function(node,value){
+    client.send('/'+node, parseFloat(value));
+    client.send('/'+node, parseFloat(value));
     client.send('/'+node, parseFloat(value));
     console.log("setLevel (node,value) : (",node,",",value,")");
 };
@@ -93,7 +99,8 @@ zwave.removeScene = function(id){
 };
 // get all scenes as an array
 zwave.getScenes = function(){
-    console.log("getScenes");
+    client.send('/status', OFF_VALUE);
+    console.log("getScenes :");
 };
 // add a zwave value to a scene
 zwave.addSceneValue = function(sceneId, nodeId, commandclass, instance, index){

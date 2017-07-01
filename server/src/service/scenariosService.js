@@ -3,8 +3,10 @@ const app = require("./server").getApp();
 const port = require("./server").getPort();
 const router = express.Router();
 
-const pieceDb = require("../db/lumieres/lumieresDb");
-const db = require("../db/lumieres/lumieresDb").getDb();
+const pieceDb = require("../db/scenarios/scenariosDb");
+const db = require("../db/scenarios/scenariosDb").getDb();
+
+const ZWave = require("../zWaveMock/ZWave").getZWave();
 
 //GET
 router.get('/', function (req, res) {
@@ -17,7 +19,7 @@ router.get('/', function (req, res) {
 router.post('/', function (req, res) {
     pieceDb.initDatabase().then((collection) => {
         collection.insert(req.body);
-        db.saveDatabase()
+        db.saveDatabase();
         res.json(req.body);
     });
 });
@@ -40,5 +42,19 @@ router.delete('/', function (req, res) {
     });
 });
 
-app.use('/api/lumieres', router);
-console.log('http://localhost:' + port + '/api/lumieres');
+//POST
+router.post('/:id/activate', function (req, res) {
+    pieceDb.initDatabase().then((collection) => {
+        collection
+            .find({id : req.params.id})
+            .appareils
+            .forEach((appareil) => {
+                ZWave.setLevel(appareil.piece+'/'+appareil.appareil,appareil.value);
+            });
+        db.saveDatabase();
+        res.json(toDelete);
+    });
+});
+
+app.use('/api/scenarios', router);
+console.log('http://localhost:' + port + '/api/scenarios');
