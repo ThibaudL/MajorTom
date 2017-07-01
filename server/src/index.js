@@ -1,3 +1,4 @@
-
-
-console.log("Hello WOrlddd");
+require("./service/piecesService");
+require("./service/utilisateursService");
+require("./service/lumieresService");
+require("./service/appareilsService");

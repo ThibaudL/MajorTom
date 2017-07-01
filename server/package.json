@@ -17,6 +17,8 @@
   "index": "dist/bundle.js",
   "main": "src/index.ts",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "dgram": "^1.0.1",
     "express": "^4.15.3",
     "fs": "0.0.1-security",
     "lokijs": "^1.5.0",
