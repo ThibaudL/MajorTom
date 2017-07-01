@@ -32,20 +32,20 @@ $(function () {
             var piece = new Object();
             var $prise = new Object();
             var $ligth = new Object();
+            var tableauFormate = [];
             var count = 0;
             var tableauOrig = [{clé:1, valeur:10}, {clé:2, valeur:20}, {clé:3, valeur: 30}];
-            var tableauFormaté = tableauOrig.map(function(obj){
-                var rObj = {};
-                rObj[obj.clé] = obj.valeur;
-                return rObj;
-            });
+
             $.each(data, function(key, val) {
-                var tableauFormaté = val.map(function(obj){
-                    var rObj = {};
-                    rObj[obj.clé] = obj.valeur;
-                    return rObj;
-                });
+                tableauFormate = data.map((val) => val.piece).reduce((a,b) => {
+                        if(!a)
+                    a = [];
+                    (!a.includes(b) && a.push(b));
+                    return a;
+                },[]);
             });
+
+            console.log(tableauFormate);
         });
 
 
