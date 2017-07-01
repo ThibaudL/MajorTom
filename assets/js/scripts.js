@@ -45,7 +45,13 @@ $(function () {
                 },[]);
             });
 
-            console.log(tableauFormate);
+
+            tableauFormate.forEach(function (item) {
+                $('#selectTypePiece')
+                    .append('<option value="'+count+'">foo</option>')
+            });
+
+
         });
 
 

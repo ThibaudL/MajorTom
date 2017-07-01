@@ -1,0 +1,230 @@
+@font-face {
+  font-family: 'weather';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf") format("truetype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.btn {
+  cursor: pointer;
+  border-radius: 0; }
+
+.btn-circle-2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: 60% !important;
+  background-position: center !important; }
+  .btn-circle-2:hover {
+    background-color: #FFF;
+    background-size: 70% !important; }
+
+.btn-primary {
+  background-color: #eb6d4a !important;
+  border-color: #eb6d4a !important;
+  transition: 0.3s linear; }
+  .btn-primary:hover {
+    background-color: #e6481c;
+    border-color: #e6481c; }
+
+.bg-primary {
+  background-color: #eb6d4a !important;
+  border-color: #eb6d4a !important;
+  color: #FFF; }
+
+.btn-sunny {
+  background: url("../img/sunny.svg") no-repeat; }
+  .btn-sunny:hover {
+    background-image: url("../img/sunny-over.svg"); }
+
+.btn-night {
+  background: url("../img/night.svg") no-repeat; }
+  .btn-night:hover {
+    background-image: url("../img/night-over.svg"); }
+
+.btn-confetti {
+  background: url("../img/confetti.svg") no-repeat; }
+  .btn-confetti:hover {
+    background-image: url("../img/confetti-over.svg"); }
+
+.btn-dream {
+  background: url("../img/dream.svg") no-repeat; }
+  .btn-dream:hover {
+    background-image: url("../img/dream-over.svg"); }
+
+.btn-alarm-clock {
+  background: url("../img/alarm-clock.svg") no-repeat; }
+  .btn-alarm-clock:hover {
+    background-image: url("../img/alarm-clock-over.svg"); }
+
+.btn-energy {
+  background: url("../img/energy.svg") no-repeat; }
+  .btn-energy:hover {
+    background-image: url("../img/energy-over.svg"); }
+
+.btn-man {
+  background: url("../img/man.svg") no-repeat;
+  background-size: 80% !important; }
+  .btn-man:hover {
+    background-image: url("../img/man-over.svg");
+    background-size: 90% !important; }
+
+.btn-woman {
+  background: url("../img/girl.svg") no-repeat;
+  background-size: 80% !important; }
+  .btn-woman:hover {
+    background-image: url("../img/girl-over.svg");
+    background-size: 90% !important; }
+
+.btn-help {
+  width: 100%; }
+
+.modal .btn-add-piece {
+  width: 100%; }
+
+body {
+  padding-top: 54px; }
+
+h2 {
+  background: #eb6d4a;
+  padding: .5em;
+  color: #FFF;
+  border-left: 10px solid #ce5d3d; }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .navbar .nav-title {
+    align-self: center; }
+    .navbar .nav-title span {
+      font-weight: bold;
+      text-transform: uppercase; }
+
+#weather {
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase; }
+  #weather i {
+    color: #fff;
+    font-family: weather;
+    font-size: 100px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.0;
+    text-transform: none; }
+  #weather .icon-0:before {
+    content: ":"; }
+  #weather .icon-1:before {
+    content: "p"; }
+  #weather .icon-2:before {
+    content: "S"; }
+  #weather .icon-3:before {
+    content: "Q"; }
+  #weather .icon-4:before {
+    content: "S"; }
+  #weather .icon-5:before {
+    content: "W"; }
+  #weather .icon-6:before {
+    content: "W"; }
+  #weather .icon-7:before {
+    content: "W"; }
+  #weather .icon-8:before {
+    content: "W"; }
+  #weather .icon-9:before {
+    content: "I"; }
+  #weather .icon-10:before {
+    content: "W"; }
+  #weather .icon-11:before {
+    content: "I"; }
+  #weather .icon-12:before {
+    content: "I"; }
+  #weather .icon-13:before {
+    content: "I"; }
+  #weather .icon-14:before {
+    content: "I"; }
+  #weather .icon-15:before {
+    content: "W"; }
+  #weather .icon-16:before {
+    content: "I"; }
+  #weather .icon-17:before {
+    content: "W"; }
+  #weather .icon-18:before {
+    content: "U"; }
+  #weather .icon-19:before {
+    content: "Z"; }
+  #weather .icon-20:before {
+    content: "Z"; }
+  #weather .icon-21:before {
+    content: "Z"; }
+  #weather .icon-22:before {
+    content: "Z"; }
+  #weather .icon-23:before {
+    content: "Z"; }
+  #weather .icon-24:before {
+    content: "E"; }
+  #weather .icon-25:before {
+    content: "E"; }
+  #weather .icon-26:before {
+    content: "3"; }
+  #weather .icon-27:before {
+    content: "a"; }
+  #weather .icon-28:before {
+    content: "A"; }
+  #weather .icon-29:before {
+    content: "a"; }
+  #weather .icon-30:before {
+    content: "A"; }
+  #weather .icon-31:before {
+    content: "6"; }
+  #weather .icon-32:before {
+    content: "1"; }
+  #weather .icon-33:before {
+    content: "6"; }
+  #weather .icon-34:before {
+    content: "1"; }
+  #weather .icon-35:before {
+    content: "W"; }
+  #weather .icon-36:before {
+    content: "1"; }
+  #weather .icon-37:before {
+    content: "S"; }
+  #weather .icon-38:before {
+    content: "S"; }
+  #weather .icon-39:before {
+    content: "S"; }
+  #weather .icon-40:before {
+    content: "M"; }
+  #weather .icon-41:before {
+    content: "W"; }
+  #weather .icon-42:before {
+    content: "I"; }
+  #weather .icon-43:before {
+    content: "W"; }
+  #weather .icon-44:before {
+    content: "a"; }
+  #weather .icon-45:before {
+    content: "S"; }
+  #weather .icon-46:before {
+    content: "U"; }
+  #weather .icon-47:before {
+    content: "S"; }
+  #weather h2 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15); }
+  #weather ul {
+    margin: 0;
+    padding: 0; }
+  #weather li {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    display: inline-block;
+    border-radius: 5px; }
+  #weather .currently {
+    margin: 0 20px; }
+
+/*# sourceMappingURL=styles.css.map */
