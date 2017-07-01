@@ -1,20 +1,31 @@
+const osc = require('node-osc');
+
+const client = new osc.Client('192.168.110.198', 8000);
+
+
 const zwave = {};
 
 zwave.setValue = function(nodeId,classId,instanceId,index,value){
     console.log("setNodeOff (nodeId,classId,instanceId,index,value) : (",nodeId,classId,instanceId,index,value,")");
 };
 
-zwave.setNodeOn = function(value){
-  console.log("setNodeOn : ",value);
+const ON_VALUE = 99;
+const OFF_VALUE = 0;
+
+zwave.setNodeOn = function(node){
+    client.send('/'+node, parseFloat(ON_VALUE));
+    console.log("setNodeOn : ",node, ON_VALUE);
 };
-zwave.setNodeOff = function(value){
-    console.log("setNodeOff : ",value);
+zwave.setNodeOff = function(node){
+    client.send('/'+node, parseFloat(OFF_VALUE));
+    console.log("setNodeOff : ",node,OFF_VALUE);
 };
 /*
  * Set a multi-level device to the specified level (between 0-99).
  * See warning below
  */
 zwave.setLevel = function(node,value){
+    client.send('/'+node, parseFloat(value));
     console.log("setLevel (node,value) : (",node,",",value,")");
 };
 zwave.setNodeLocation = function(node,location){
